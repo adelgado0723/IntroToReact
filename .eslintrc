@@ -1,7 +1,18 @@
 {
-  "extends": ["eslint:recommended", "airbnb", "prettier", "prettier/react"],
-  "plugins": ["prettier"],
+  // "extends": ["eslint:recommended", "airbnb", "eslint-config-prettier", "prettier/react"],
+
+  "extends": [
+    "eslint:recommended",
+    "eslint-config-prettier",
+    "prettier/react",
+    "plugin:import/errors",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended",
+    "prettier"
+  ],
+  "plugins": ["eslint-plugin-prettier", "react", "import", "jsx-a11y"],
   "rules": {
+    "react/prop-types": 0,
     "no-console": 2,
     "prettier/prettier": [
       "error",
@@ -14,7 +25,7 @@
     ]
   },
   "parserOptions": {
-    "ecmaVersion": 2016,
+    "ecmaVersion": 2018,
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true

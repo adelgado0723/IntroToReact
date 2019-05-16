@@ -8,8 +8,9 @@
     "start:win32": "browser-sync start --server --files '**/*.css, **/*.html, **/*.js, !node_modules/**/*' --directory --port 7777 --browser \"C:\\Program Files\\Firefox Developer Edition\\firefox.exe\"",
     "//": "Hello! If you are having trouble running this command. Try changing Firefox Developer Edition to FirefoxDeveloperEdition",
     "start:darwin:linux": "browser-sync start --server --files '**/*.css, **/*.html, **/*.js, !node_modules/**/*' --directory --port 7777 --browser 'Firefox Developer Edition'",
-    "format": "prettier --write \"src/**/*.{js,jsx}\"",
-    "lint": "eslint **/*.{js,jsx} --quiet"
+    "format": "./node_modules/.bin/prettier --write \"AdoptMe/src/**/*.{js,jsx}\"",
+    "lint": "./node_modules/.bin/eslint **/*.{js,jsx} --quiet",
+    "dev": "parcel AdoptMe/src/index.html"
   },
   "repository": {
     "type": "git",
@@ -27,13 +28,20 @@
   "homepage": "https://github.com/adelgado0723/IntroToReact#readme",
   "devDependencies": {
     "browser-sync": "^2.24.5",
-    "eslint": "^5.3.0",
+    "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^4.2.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.11.0",
+    "parcel-bundler": "^1.12.3",
     "run-script-os": "^1.0.3"
+  },
+  "dependencies": {
+    "petfinder-client": "^1.0.2",
+    "prettier": "^1.17.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   }
 }
