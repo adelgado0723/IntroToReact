@@ -27,6 +27,11 @@
   },
   "homepage": "https://github.com/adelgado0723/IntroToReact#readme",
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
     "browser-sync": "^2.24.5",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
@@ -39,6 +44,7 @@
     "run-script-os": "^1.0.3"
   },
   "dependencies": {
+    "@reach/router": "^1.2.1",
     "petfinder-client": "^1.0.2",
     "prettier": "^1.17.1",
     "react": "^16.8.6",
