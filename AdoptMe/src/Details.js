@@ -8,10 +8,8 @@ const petfinder = pf({
 });
 
 class Details extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { loading: true };
-  }
+  state = { loading: true };
+
   componentDidMount() {
     petfinder.pet
       .get({
@@ -41,9 +39,10 @@ class Details extends React.Component {
     if (this.state.loading) {
       return <h1>loading...</h1>;
     }
-    const { animal, breed, location, description } = this.state;
+    const { media, animal, breed, location, description } = this.state;
     return (
       <div className="details">
+        <Carousel media={media} />
         <div>
           <h1>{name}</h1>
           <h2>{`${animal} - ${breed} - ${location}`}</h2>
