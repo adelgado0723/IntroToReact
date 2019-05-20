@@ -13,16 +13,18 @@
   "plugins": ["eslint-plugin-prettier", "react", "import", "jsx-a11y"],
   "rules": {
     "react/prop-types": 0,
-    "no-console": 2,
+    //"no-console": 2,
     "prettier/prettier": [
       "error",
       {
         "trailingComma": "es5",
         "singleQuote": true,
-        "printWidth": 120
+        "printWidth": 80
         //"tabWidth": 8
       }
-    ]
+    ],
+    "jsx-a11y/label-has-for": 0,
+    "no-console": 1
   },
   "parser": "babel-eslint",
   "parserOptions": {
