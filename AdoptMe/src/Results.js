@@ -1,6 +1,7 @@
 import React from 'react';
 import Pet from './Pet';
 import pf from 'petfinder-client';
+import SearchBox from './SearchBox';
 
 const petfinder = pf({
   key: process.env.API_KEY,
@@ -13,26 +14,29 @@ class Results extends React.Component {
   };
 
   componentDidMount() {
-    petfinder.pet.find({ location: 'Miami, FL', output: 'full' }).then((data) => {
-      let pets;
-      if (data.petfinder.pets && data.petfinder.pets.pet) {
-        if (Array.isArray(data.petfinder.pets.pet)) {
-          pets = data.petfinder.pets.pet;
+    petfinder.pet
+      .find({ location: 'Miami, FL', output: 'full' })
+      .then((data) => {
+        let pets;
+        if (data.petfinder.pets && data.petfinder.pets.pet) {
+          if (Array.isArray(data.petfinder.pets.pet)) {
+            pets = data.petfinder.pets.pet;
+          } else {
+            pets = [data.petfinder.pets.pet];
+          }
         } else {
-          pets = [data.petfinder.pets.pet];
+          pets = [];
         }
-      } else {
-        pets = [];
-      }
 
-      this.setState({
-        pets: pets,
+        this.setState({
+          pets: pets,
+        });
       });
-    });
   }
   render() {
     return (
       <div className="search">
+        <SearchBox />
         {this.state.pets.map((pet) => {
           let breed;
           if (Array.isArray(pet.breeds.breed)) {

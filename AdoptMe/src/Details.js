@@ -26,7 +26,9 @@ class Details extends React.Component {
         this.setState({
           name: data.petfinder.pet.name,
           animal: data.petfinder.pet.animal,
-          location: `${data.petfinder.pet.contact.city}, ${data.petfinder.pet.contact.state}`,
+          location: `${data.petfinder.pet.contact.city}, ${
+            data.petfinder.pet.contact.state
+          }`,
           description: data.petfinder.pet.description,
           media: data.petfinder.pet.media,
           breed,
