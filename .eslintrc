@@ -13,6 +13,7 @@
   "plugins": ["eslint-plugin-prettier", "react", "import", "jsx-a11y"],
   "rules": {
     "react/prop-types": 0,
+    // "brace-style": "allman",
     //"no-console": 2,
     "prettier/prettier": [
       "error",
