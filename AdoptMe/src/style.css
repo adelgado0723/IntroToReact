@@ -38,6 +38,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  /* border: 5px solid red; */
 }
 
 .image-container {
@@ -55,6 +56,7 @@ body {
   width: 100%;
   overflow: hidden;
   margin: 0;
+  /* border: 5px solid red; */
 }
 
 .pet h2 {
@@ -62,6 +64,7 @@ body {
   font-weight: normal;
   font-size: 20px;
   margin: 0;
+  /* border: 5px solid red; */
 }
 
 header a {
