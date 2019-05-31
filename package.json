@@ -1,16 +1,21 @@
 {
-  "name": "IntroToReact",
+  "name": "adopt-me",
   "version": "1.0.0",
-  "description": "Introduction To React Tutorial ",
-  "main": "index.js",
+  "description": "An app to teach you to write React",
+  "main": "AdoptMe/src/App.js",
   "scripts": {
-    "start": "run-script-os",
-    "start:win32": "browser-sync start --server --files '**/*.css, **/*.html, **/*.js, !node_modules/**/*' --directory --port 7777 --browser \"C:\\Program Files\\Firefox Developer Edition\\firefox.exe\"",
-    "//": "Hello! If you are having trouble running this command. Try changing Firefox Developer Edition to FirefoxDeveloperEdition",
-    "start:darwin:linux": "browser-sync start --server --files '**/*.css, **/*.html, **/*.js, !node_modules/**/*' --directory --port 7777 --browser 'Firefox Developer Edition'",
-    "format": "./node_modules/.bin/prettier --write \"AdoptMe/src/**/*.{js,jsx}\"",
-    "lint": "./node_modules/.bin/eslint **/*.{js,jsx} --quiet",
+    "test": "jest --silent",
+    "test:coverage": "jest --coverage",
+    "test:update": "jest -u",
+    "test:watch": "jest --watch",
+    "format": "prettier --write \"AdoptMe/src/**/*.{js,jsx}\"",
+    "lint": "eslint \"AdoptMe/src/**/*.{js,jsx}\" --quiet",
     "dev": "parcel AdoptMe/src/index.html"
+  },
+  "jest": {
+    "transformIgnorePatterns": [
+      "/node_modules/(?!petfinder-client).+"
+    ]
   },
   "repository": {
     "type": "git",
@@ -28,29 +33,25 @@
   "homepage": "https://github.com/adelgado0723/IntroToReact#readme",
   "devDependencies": {
     "babel-core": "^6.26.3",
-    "babel-eslint": "^10.0.1",
+    "babel-eslint": "^8.2.6",
     "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
-    "browser-sync": "^2.24.5",
-    "eslint": "^5.16.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-config-prettier": "^4.2.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^6.1.1",
-    "eslint-plugin-prettier": "^3.0.1",
-    "eslint-plugin-react": "^7.11.0",
-    "jest": "^24.8.0",
-    "parcel-bundler": "^1.12.3",
-    "react-test-renderer": "^16.8.6",
-    "run-script-os": "^1.0.3"
+    "eslint": "^5.3.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.13.0",
+    "jest": "^23.5.0",
+    "parcel-bundler": "^1.11.0",
+    "prettier": "^1.14.2"
   },
   "dependencies": {
     "@reach/router": "^1.2.1",
     "petfinder-client": "^1.0.2",
-    "prettier": "^1.17.1",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-scripts": "^3.0.1"
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-test-renderer": "^16.4.2"
   }
 }

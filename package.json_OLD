@@ -1,0 +1,63 @@
+{
+  "name": "IntroToReact",
+  "version": "1.0.0",
+  "description": "Introduction To React Tutorial ",
+  "main": "AdoptMe/src/App.js",
+  "scripts": {
+    "start": "run-script-os",
+    "start:win32": "browser-sync start --server --files '**/*.css, **/*.html, **/*.js, !node_modules/**/*' --directory --port 7777 --browser \"C:\\Program Files\\Firefox Developer Edition\\firefox.exe\"",
+    "//": "Hello! If you are having trouble running this command. Try changing Firefox Developer Edition to FirefoxDeveloperEdition",
+    "start:darwin:linux": "browser-sync start --server --files '**/*.css, **/*.html, **/*.js, !node_modules/**/*' --directory --port 7777 --browser 'Firefox Developer Edition'",
+    "format": "./node_modules/.bin/prettier --write \"AdoptMe/src/**/*.{js,jsx}\"",
+    "lint": "./node_modules/.bin/eslint **/*.{js,jsx} --quiet",
+    "dev": "parcel AdoptMe/src/index.html",
+    "test:update": "jest -u",
+    "test": "jest --silent"
+  },
+  "jest": {
+    "transformIgnorePatterns": [
+      "/node_modules/(?!petfinder-client).+"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adelgado0723/IntroToReact.git"
+  },
+  "keywords": [
+    "React",
+    "JavaScript"
+  ],
+  "author": "Andy Delgado",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adelgado0723/IntroToReact/issues"
+  },
+  "homepage": "https://github.com/adelgado0723/IntroToReact#readme",
+  "devDependencies": {
+    "@babel/core": "^7.0.1",
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "babel-preset-env": "^1.7.0",
+    "@babel/preset-react": ,
+    "browser-sync": "^2.24.5",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.2.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.11.0",
+    "jest": "^24.8.0",
+    "parcel-bundler": "^1.12.3",
+    "react-test-renderer": "^16.8.6",
+    "run-script-os": "^1.0.3"
+  },
+  "dependencies": {
+    "@reach/router": "^1.2.1",
+    "petfinder-client": "^1.0.2",
+    "prettier": "^1.17.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "^3.0.1"
+  }
+}
