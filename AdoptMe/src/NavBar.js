@@ -1,9 +1,30 @@
 import React from 'react';
 import { Link } from '@reach/router';
 import styled from '@emotion/styled';
+import { keyframes } from '@emotion/core';
+import colors from './colors';
+
+const NavLink = styled(Link)`
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
+const Spin = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+`;
+const SpyGlass = styled('span')`
+  display: inline-block;
+  animation: 1s ${Spin} linear infinite;
+`;
 
 const Container = styled('header')`
-  background-color: #333;
+  background-color: ${colors.dark};
   position: sticky;
   top: 0;
   z-index: 10;
@@ -11,12 +32,12 @@ const Container = styled('header')`
 
 const NavBar = () => (
   <Container>
-    <Link to="/">Adopt Me!</Link>
-    <Link to="/search-params">
-      <span aria-label="search" role="img">
+    <NavLink to="/">Adopt Me!</NavLink>
+    <NavLink to="/search-params">
+      <SpyGlass aria-label="search" role="img">
         🔍
-      </span>
-    </Link>
+      </SpyGlass>
+    </NavLink>
   </Container>
 );
 

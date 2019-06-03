@@ -39,7 +39,6 @@
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "babel-preset-env": "^1.7.0",
-    "@babel/preset-react": ,
     "browser-sync": "^2.24.5",
     "eslint": "^5.16.0",
     "eslint-config-prettier": "^4.2.0",
